@@ -14,9 +14,9 @@ Logo = """
 
 def home_dp():
     print(Logo)
-    print("欢迎来到心电社区Shell版本 v1.0.1\n")
+    print("欢迎来到心电社区Shell版本 v0.0.1\n")
     print("公告:", get_announcement())
-    print("输入指令以继续\n")
+    print("输入`help`获得帮助\n")
 
 def posts_dp():
     print("输入1: 按热度排序 输入2: 按时间排序")
