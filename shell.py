@@ -7,8 +7,11 @@ def shell(ish):
         posts_dp()
     elif (_ish=="help"):
         print("""
-posts: 获取文章（目前只能看到标题）
+posts: 获取文章列表
+read_post: 阅读文章
 exit:  退出
         """)
+    elif (_ish=="read_post"):
+        read_post_dp()
     else:
         print("错误: 非法指令")

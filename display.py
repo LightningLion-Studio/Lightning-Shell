@@ -19,9 +19,17 @@ def home_dp():
     print("输入`help`获得帮助\n")
 
 def posts_dp():
-    print("输入1: 按热度排序 输入2: 按时间排序")
+    print("\n输入1: 按热度排序\n输入2: 按时间排序\n")
     posts_id = input("请输入你要获取的类型: ")
-    print(get_posts(posts_id))
+    print("")
+    get_posts(posts_id)
+    print("")
+
+def read_post_dp():
+    print("请输入文章id")
+    id = input(">> ")
+    get_read_post(id)
+
 
 def login():
     print("登陆时间：", time.asctime(time.localtime(time.time())))
