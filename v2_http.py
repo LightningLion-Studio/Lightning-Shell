@@ -1,6 +1,11 @@
 import requests
 import json
 
+from html.parser import HTMLParser
+
+class HTMLParser_v2(HTMLParser):
+    def handle_data(self, data):
+        print(":", data)
 
 api = "https://v2.api.light.xhhzs.cn/v2/"
 
@@ -17,7 +22,7 @@ def get_posts(posts_id):
     for i in titles:
         title=i.get("title")
         id=i.get("id")
-        print(f"|标题:{title}|id:{id}|")
+        print(f"标题:{title}, id:{id}")
 
 def get_read_post(post_id):
     get_data = requests.get(api+"post/single?id="+post_id)
@@ -25,8 +30,6 @@ def get_read_post(post_id):
     text_data = json_data.get("data")
     text_title = text_data.get("title")
     text_body = text_data.get("data")
-    print(f"""
-        {text_title}
-
-{text_body}
-    """)
+    parser = HTMLParser_v2()
+    print(f"\n{text_title}\n")
+    parser.feed(text_body)

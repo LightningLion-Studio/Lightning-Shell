@@ -6,6 +6,6 @@ home_dp()
 while True:
     ish = input("-> ")
     if (ish == "exit"):
-        print("期待与你的下次相见 (^ω^)  ")
+        print("期待与你的下次相见")
         break
     shell(ish)

@@ -14,20 +14,24 @@ Logo = """
 
 def home_dp():
     print(Logo)
-    print("欢迎来到心电社区Shell版本 v0.0.1\n")
+    print("欢迎来到心电社区Shell版本 v1.0.1\n")
     print("公告:", get_announcement())
     print("输入`help`获得帮助\n")
 
 def posts_dp():
-    print("\n输入1: 按热度排序\n输入2: 按时间排序\n")
-    posts_id = input("请输入你要获取的类型: ")
     print("")
-    get_posts(posts_id)
+    get_posts("2")
+    print("")
+
+def posts_hot_dp():
+    print("")
+    get_posts("1")
     print("")
 
 def read_post_dp():
-    print("请输入文章id")
-    id = input(">> ")
+    print("")
+    id = input("-> 文章id=")
+    print("")
     get_read_post(id)
 
 
